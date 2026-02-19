@@ -4,7 +4,7 @@ from .class_SeaPlane import SeaPlane
 from .class_GridOverlay import GridOverlay
 from .class_CoordinatesText import CoordinatesText
 from .class_NavButton import NavButton
-from .class_Ships import Ships
+from .class_ShipsMenu import ShipsMenu
 
 
 my_wather_area = SeaPlane()
@@ -23,11 +23,38 @@ enemy_coodinates = CoordinatesText(enemy_lower_grid)
 nav_button = NavButton(position=(-1, .4, 0))
 
 
-# my_four_decks = Ships(
-#     model='../assets/models/newport/uss_newport_news_war_thunder.glb',
-#     position=Vec3(0, 0, 0),
-#     rotation=Vec3(90, 0, 0),
-#     scale=.05
-#     )
+four_decks = ShipsMenu(
+    model='assets/models/newport/newport.glb',
+    position=Vec3(8, .2, 5),
+    rotation=Vec3(90, 90, 0),
+    scale=.011,
+    deck_amount=4,
+    ship_counter=1,
+    )
 
-# my_four_decks = Ships()
+three_decks = ShipsMenu(
+    model='assets/models/ton/tone.glb',
+    position=Vec3(8, .2, 3),
+    rotation=Vec3(90, 90, 0),
+    scale=.009,
+    deck_amount=3,
+    ship_counter=2,
+    )
+
+two_decks = ShipsMenu(
+    model='assets/models/lowa/lowa.glb',
+    position=Vec3(8, .2, 1),
+    rotation=Vec3(90, 0, 0),
+    scale=.006,
+    deck_amount=2,
+    ship_counter=3,
+    )
+
+one_decks = ShipsMenu(
+    model='assets/models/meteor/meteor.glb',
+    position=Vec3(8, .2, -1),
+    rotation=Vec3(180, 0, 0),
+    scale=.007,
+    deck_amount=1,
+    ship_counter=4,
+    )
