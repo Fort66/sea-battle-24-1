@@ -136,10 +136,28 @@
 
 #*************************************
 
+from classes.class_Ships import Ships
 
-# from ursina import *
 
-# app = Ursina()
+from ursina import *
+
+
+
+
+# Entity(
+#     model='assets/models/newport/USS_Newport_News.obj',
+#     texture='assets/models/newport/textures/cruiser_des_moines_class_newport_news_c_camo_brown_wood.jpg',
+#     position=Vec3(0, 0, 0),
+#     rotation=Vec3(0, 0, 0),
+#     scale=.05,
+#     collider='box',
+#     # shader=lit_with_shadows_shader
+#     )
+
+ships = Ships()
+
+
+app = Ursina()
 
 # def create_pulsing_button(text='', w=0.5, h=0.2, r=0.2, pos=(0,0)):
 #     base_scale = Vec2(w, h)
@@ -174,5 +192,13 @@
 
 # create_pulsing_button("Pulse Button", w=0.4, h=0.15, r=0.5)
 
-# app.run()
+
+
+
+EditorCamera()
+camera.position=Vec3(0, 15, 0)
+camera.rotation = Vec3(35, 0, 0)
+camera.fov = 60
+
+app.run()
 
